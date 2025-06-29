@@ -1,3 +1,4 @@
+<!-- README.md -->
 # YOLOv5 Road Safety Helmet Detection
 
 A computer vision project for detecting motorcycle riders, helmets, and number plates using YOLOv5. This system can identify riders wearing helmets, those without helmets, and capture number plates for road safety enforcement.
