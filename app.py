@@ -1,13 +1,12 @@
 # app.py
+
 import streamlit as st
-from PIL import Image
 import torch
-from pathlib import Path
-import os
+from PIL import Image
 
 # Load model
 model_path = "runs/train/helmet_model11/weights/best.pt"
-model = torch.hub.load('ultralytics/yolov5', 'custom', path=model_path, force_reload=True)
+model = torch.hub.load("ultralytics/yolov5", "custom", path=model_path, force_reload=True)
 
 st.title("Helmet Detection App")
 
@@ -22,4 +21,3 @@ if uploaded_file:
 
     # Display result
     st.image(results.ims[0], caption="Detected Image", use_column_width=True)
-
