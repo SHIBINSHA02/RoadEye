@@ -1,4 +1,5 @@
 <!-- README.md -->
+
 # YOLOv5 Road Safety Helmet Detection
 
 A computer vision project for detecting motorcycle riders, helmets, and number plates using YOLOv5. This system can identify riders wearing helmets, those without helmets, and capture number plates for road safety enforcement.
@@ -6,6 +7,7 @@ A computer vision project for detecting motorcycle riders, helmets, and number p
 ## 🎯 Project Overview
 
 This project uses YOLOv5 to detect and classify:
+
 - **With Helmet**: Riders wearing protective helmets
 - **Without Helmet**: Riders not wearing helmets
 - **Rider**: General rider detection
@@ -36,7 +38,7 @@ conda activate yolov5
 
 # Or using venv
 python -m venv yolov5-env
-source yolov5-env/bin/activate  # On Windows: yolov5-env\Scripts\activate
+source yolov5-env/bin/activate # On Windows: yolov5-env\Scripts\activate
 ```
 
 ### 3. Install Dependencies
@@ -124,12 +126,14 @@ python train.py --resume runs/train/helmet_model/weights/last.pt
 ### Setting Up Your Dataset
 
 1. **Create the directory structure**:
+
 ```bash
 cd yolov5
 mkdir -p data/train/images data/train/labels data/val/images data/val/labels
 ```
 
 2. **Copy your images and labels**:
+
 ```bash
 # Copy training images
 cp /path/to/your/train/images/* data/train/images/
@@ -145,6 +149,7 @@ cp /path/to/your/val/labels/* data/val/labels/
 ```
 
 3. **Verify your dataset**:
+
 ```bash
 # Check if images and labels match
 python -c "
@@ -232,9 +237,10 @@ tensorboard --logdir runs/train
 ### Common Issues
 
 1. **CUDA Out of Memory**
+
    ```bash
    # Reduce batch size
-   python train.py --batch 8  # or smaller
+   python train.py --batch 8 # or smaller
    ```
 
 2. **Dataset Path Issues**
@@ -258,6 +264,7 @@ python train.py --data data/helmet_data.yaml --weights yolov5s.pt --amp
 ## 📋 Requirements
 
 Key dependencies:
+
 - torch>=1.7.0
 - torchvision>=0.8.1
 - opencv-python>=4.1.1
@@ -290,6 +297,7 @@ This project is licensed under the GPL-3.0 License - see the [LICENSE](LICENSE) 
 ## 📞 Support
 
 For issues and questions:
+
 1. Check the [YOLOv5 documentation](https://docs.ultralytics.com/)
 2. Search existing issues on GitHub
 3. Create a new issue with detailed information
